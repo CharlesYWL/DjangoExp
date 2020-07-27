@@ -1,8 +1,13 @@
-<h1>Delete Post </h1>
+{% extends 'base.html' %} {% block content %}
+
+<h1>Delete Post</h1>
 
 <form action="" method="post" enctype="multipart/form-data">
-    {% csrf_token %}
-    <p> Are you sure to delete "{{post.title}}" ? </p>
-    <button type="submit">Delete</button>
-    <button type="button" onclick="history.back()">Cancel</button>
+  {% csrf_token %}
+  <p>Are you sure to delete "{{post.title}}" ?</p>
+  <button class="btn btn-danger" type="submit">Delete</button>
+  <button class="btn btn-secondary" type="button" onclick="history.back()">
+    Cancel
+  </button>
 </form>
+{% endblock content %}
