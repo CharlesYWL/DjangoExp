@@ -1,16 +1,18 @@
 {% extends "base.html" %} 
+{% load static %}
 
 {% load custom_tags %}
 
 {% block content %}
 
+{% if user.is_authenticated%}
 <div class="cards-listing">
   {% for post in object_list %}
   <div class="row">
     <div class="card view-update {{ post.pk }}">
       <div class="card__panel-head">
         <div class="poster__info">
-          <a href="{% url 'helloworld' %}" class="poster__name">
+          <a href="{% url 'user_detail' post.author.id %}" class="poster__name">
             {% if post.author.profile_pic %}
             <img
               class="poster__profilepic"
@@ -18,6 +20,9 @@
             />
             {% endif %} {{ post.author.username }}
           </a>
+          <span class="poster__timestamp">
+              {{ post.posted_on|timesince }} ago
+          </span>
         </div>
       </div>
 
@@ -43,5 +48,12 @@
   </div>
   {% endfor %}
 </div>
+{% else %}
+<div style="width:100%;height:90vh;position:relative" >
+<img style="width:100%;height:100%; object-fit:cover" src="{% static '/image/defaultPage.jpg' %}">
+<div style="position:absolute;left:50%;top:50%;color:black;  transform: translate(-50%, -50%);
+font-size:50px">Welcome To WY Insta</div>
+</div>
+{% endif %}
 
 {% endblock content %}

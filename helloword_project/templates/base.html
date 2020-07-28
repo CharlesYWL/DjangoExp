@@ -12,13 +12,7 @@
       href="{% static 'vendor/font-awesome-4.6.3/css/font-awesome.min.css' %}"
       rel="stylesheet"
     />
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    /> -->
+    <link type="text/css" href="{% static 'css/style.css' %}" rel="stylesheet" />
   </head>
   <body>
     {% load static %} {% include 'header.html' %}
@@ -42,7 +36,7 @@
       src="{% static 'js/ajax-csrf-auth.js' %}"
     ></script>
     <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
-
+    <script src="https://kit.fontawesome.com/d098327332.js" crossorigin="anonymous"></script>
     {% block extrascript %} {% endblock %}
   </body>
 </html>

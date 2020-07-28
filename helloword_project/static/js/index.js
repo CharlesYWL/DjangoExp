@@ -98,7 +98,7 @@ function create_comment(success_cb, error_cb) {
 
   $.ajax({
     type: "POST",
-    url: "/comment",
+    url: "/insta/comment",
     data: {
       comment_text: comment_text,
       post_pk: post_pk,
@@ -118,6 +118,7 @@ function comment_update_view(data) {
   var commentHTML =
     '<li class="comment-list__comment"><a class="user"> ' +
     data.commenter_info.username +
+    ":" +
     '</a> <span class="comment">' +
     data.commenter_info.comment_text +
     "</span></li>";
@@ -146,7 +147,7 @@ function follow_user(success_cb, error_cb, type) {
 
   $.ajax({
     type: "POST",
-    url: "/togglefollow",
+    url: "/insta/togglefollow",
     data: {
       follow_user_pk: follow_user_pk,
       type: type,

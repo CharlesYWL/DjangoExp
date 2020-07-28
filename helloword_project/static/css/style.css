@@ -784,3 +784,15 @@ a:hover {
 }
 
 /*# sourceMappingURL=style.css.map */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.header-head {
+}
+.header-title {
+}
+.header-delete {
+  margin-left: auto;
+}

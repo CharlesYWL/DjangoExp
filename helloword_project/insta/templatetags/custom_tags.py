@@ -29,6 +29,7 @@ def active(context, pattern_or_urlname):
     except NoReverseMatch:
         pattern = pattern_or_urlname
     path = context['request'].path
+    print(path)
     if re.search(pattern, path):
         return 'active'
     return ''
