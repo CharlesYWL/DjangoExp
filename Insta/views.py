@@ -61,7 +61,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 
 class PostUpdateView(UpdateView):
     model = Post
-    template_name = 'post_update.html'
+    template_name = 'post_edit.html'
     fields = '__all__'
 
 
@@ -84,6 +84,13 @@ class ExploreView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Post.objects.all().order_by('-posted_on')[:20]
+
+
+class EditProfile(LoginRequiredMixin, UpdateView):
+    model = InstaUser
+    template_name = 'user_edit.html'
+    fields = ['profile_pic', 'username']
+    login_url = 'login'
 
 
 @ajax_request
