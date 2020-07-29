@@ -25,8 +25,9 @@ SECRET_KEY = 'ln)j)yu5zq$$@&b_6gxb4q_b+it0be4cy4c=r)yvs8+h0@f&ls'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+DEBUG404 = True
 
-ALLOWED_HOSTS = ['wy-insta.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -169,16 +170,13 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
-
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
