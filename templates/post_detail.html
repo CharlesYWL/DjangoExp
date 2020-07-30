@@ -12,7 +12,7 @@
           <div class="header-head">
             <a href="{% url 'user_detail' object.author.id %}">
                 {% if object.author.profile_pic %}
-                    <img class="picture-circle--medium" src="http://{{ request.META.HTTP_HOST }}/{{object.author.profile_pic.url}}">
+                    <img class="picture-circle--medium" src="http://{{ request.META.HTTP_HOST }}/{{object.author.profile_pic.url}}"/>
                 {% endif %}
                 {{ object.author.username }}:
             </a>
@@ -35,7 +35,7 @@
           </div>
         </div>
         <div class="image__wrapper">
-            <img class="card__main-image" src="http://{{ request.META.HTTP_HOST }}/{{object.image.url}}" width='1000', height='1000', style="object-fit:cover;">
+            <img class="card__main-image" src="http://{{ request.META.HTTP_HOST }}/{{object.image.url}}" width='1000', height='1000', style="object-fit:cover;"/>
         </div>
         <div class="comments-portion">
             <div class="likes-timestamp-row">

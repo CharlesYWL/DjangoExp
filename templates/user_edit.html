@@ -6,7 +6,7 @@
   <div class="col-xs-12">
     <div class="profile-pic-name">
       {% if user.profile_pic %}
-        <img class="picture-circle--medium" src="http://{{ request.META.HTTP_HOST }}/{{user.profile_pic.url}}">
+        <img class="picture-circle--medium" src="http://{{ request.META.HTTP_HOST }}/{{user.profile_pic.url}}"/>
       {% endif %}
       <span class="username">{{ user.username }}</span>
     </div>
