@@ -16,7 +16,7 @@
             {% if post.author.profile_pic %}
             <img
               class="poster__profilepic"
-              src="{{ post.author.profile_pic.url }}"
+              src="{% static post.author.profile_pic.url %}"
             />
             {% endif %} {{ post.author.username }}
           </a>
