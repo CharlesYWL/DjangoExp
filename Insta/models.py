@@ -7,7 +7,7 @@ from imagekit.models import ProcessedImageField
 
 class InstaUser(AbstractUser):
     profile_pic = ProcessedImageField(
-        upload_to='static/image/profiles',
+        upload_to='image/profiles',
         format='JPEG',
         options={'quality': 100},
         blank=True,
@@ -56,7 +56,7 @@ class Post(models.Model):
     )
     title = models.TextField(blank=True, null=True)
     image = ProcessedImageField(
-        upload_to='static/image/posts',
+        upload_to='image/posts',
         format='JPEG',
         options={'quality': 100},
         blank=True,
