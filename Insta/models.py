@@ -52,7 +52,7 @@ class Post(models.Model):
     author = models.ForeignKey(
         InstaUser,
         on_delete=models.CASCADE,
-        related_name='posts'
+        related_name='posts',
     )
     title = models.TextField(blank=True, null=True)
     image = ProcessedImageField(
@@ -69,6 +69,9 @@ class Post(models.Model):
 
     def get_like_count(self):
         return self.likes.count()
+
+    def get_comment_count(self):
+        return self.comments.count()
 
 
 class Like(models.Model):

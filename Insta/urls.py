@@ -15,6 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf import settings
+from django.conf.urls.static import static
 from Insta.views import HelloWorld, PostsView, PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, addLike, UserDetailView, toggleFollow, makeComment, ExploreView, EditProfile
 
 urlpatterns = [
@@ -32,4 +34,4 @@ urlpatterns = [
     path('togglefollow', toggleFollow, name='toggleFollow'),
     path('comment', makeComment, name='makeComment'),
     path('explore', ExploreView.as_view(), name="explore"),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -55,6 +55,7 @@ class UserDetailView(DetailView):
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     template_name = 'post_create.html'
+    # fields = ['title', 'image']
     fields = '__all__'
     login_url = 'login'
 
