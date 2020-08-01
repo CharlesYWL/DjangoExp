@@ -127,12 +127,12 @@ AUTH_USER_MODEL = 'Insta.InstaUser'
 
 DATABASES = {
     'default': {
+	'NAME':'django',
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Database-1',
-        'SERVER': 'ls-13252bef111aedddc7e4cdf208774f1d98c345a3.cdmtusdzz0aq.us-east-1.rds.amazonaws.com',
+        'HOST': 'ls-13252bef111aedddc7e4cdf208774f1d98c345a3.cdmtusdzz0aq.us-east-1.rds.amazonaws.com',
         'PORT': '3306',
         'USER': 'dbmasteruser',
-        'PASSWORD': 'A`o;[2+0.d4x1)tl2QX{%0m,2KnwA=a~',
+        'PASSWORD': '00000000',
     }
 }
 
@@ -188,4 +188,3 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 COMPRESS_ENABLED = os.environ.get('COMPRESS_ENABLED', False)
 
-django_heroku.settings(locals())
