@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ln)j)yu5zq$$@&b_6gxb4q_b+it0be4cy4c=r)yvs8+h0@f&ls'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -127,8 +127,12 @@ AUTH_USER_MODEL = 'Insta.InstaUser'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'Database-1',
+        'SERVER': 'ls-13252bef111aedddc7e4cdf208774f1d98c345a3.cdmtusdzz0aq.us-east-1.rds.amazonaws.com',
+        'PORT': '3306',
+        'USER': 'dbmasteruser',
+        'PASSWORD': 'A`o;[2+0.d4x1)tl2QX{%0m,2KnwA=a~',
     }
 }
 
