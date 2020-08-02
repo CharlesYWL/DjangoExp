@@ -38,7 +38,7 @@
   ![alt postpage](image/apiposts.png)
 
 - ### api/likes
-  ![alt postpage](image/likes.png)
+  ![alt postpage](image/apilikes.png)
 
 ## FramWork
 
