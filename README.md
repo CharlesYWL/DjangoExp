@@ -1,6 +1,6 @@
 # Insta-like Web Application(Django & AWS LightSail)
 
-[Link to Website](http://23.22.140.235/)
+[Link to Website](http://www.wyinsta.com//)
 
 ## Pages
 
